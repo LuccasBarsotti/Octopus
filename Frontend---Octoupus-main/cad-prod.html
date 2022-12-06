@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script src="/js/funcoes.js"></script>
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="direita">
+            <div class="titulopagina">
+                <h3>PRODUTO/CADASTRO</h3>
+            </div>
+            <div class="botao">
+                <button class="submit" onclick="validar()">Enviar</button>
+            </div> 
+        </div>
+        <div class="busca">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+        </div>
+    </div>
+    <div id="cad-prod">
+        <form class="cartao">
+            <div class="conteudo-cartao">
+                <div class="area">
+                    <label for="codigodebarras">Código de Barras:</label>
+                    <input type="text" name="codigodebarras" id="codigo" autocomplete="off">
+                </div>
+                <div class="area">
+                    <label for="nomedoproduto">Nome do Produto:</label>
+                    <input type="text" name="nomedoproduto" id="nome" autocomplete="off">
+                </div>
+                <div class="area">
+                    <label for="quantidadedoproduto">Quantidade do Produto:</label>
+                    <input type="number" name="quantidadedoproduto" id="quantidade" autocomplete="off">
+                </div>
+                <div class="imagem">
+                    <label><input type="file" style="display: none;" name="fotodoproduto" id="imagem" accept="image/png, image/jpeg, image/jpg">Escolha uma Imagem</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

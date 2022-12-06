@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Estoque {% endblock title %}
+{% block css %} {% static 'style.css' %} {% endblock css %}
+{% block main_button %} <a href="{% url 'warehouse:cad_prod' %}" class="list-group-item">CADASTRAR</a> {% endblock main_button %}
+{% block user %} 
+  {% if employee.position == 'Gestor de estoque' %}
+    {{ employee.name }} (ge)
+  {% else %}
+    {{ employee.name }} (es)
+  {% endif %}
+{% endblock user %}
+{% block content %}
+{% if products_list %}
+<div class="container">
+    {% for product in products_list %}
+    <!-- Card 1 -->
+    <a href="{% url 'warehouse:history' bar_code=product.bar_code %}" style="text-decoration: none">
+    <div class="card card-1">
+      <!-- card-header -->
+      <div class="card-header">
+        <img src="{{product.img}}" class="card-img" />
+      </div>
+      <!-- card-header -->
+
+      <!-- card-body -->
+      <div class="card-body">
+        <h3 class="card-titulo">{{ product.name }}</h3>
+        <h2 class="card-titulo">{{ product.bar_code }}</h2>
+        <p class="card-titulo">
+            {{ product.qtt }} unidade(s)
+        </p>
+      </div>
+      <!-- card-body -->
+    </div>
+    </a>
+    {% endfor %}
+{% else %}
+    <br><br>
+    <h1 style="text-align: center">Não foi encontrado nenhum Produto.</h1>
+{% endif %}
+{% endblock content %}

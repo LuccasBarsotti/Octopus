@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Movimentar Estoque {% endblock title %}
+{% block css %} {% static 'style.css' %} {% endblock css %}
+{% block main_button %} <button type="submit" form="update_product" class="list-group-item" style="background-color: red"> SALVAR </button> {% endblock main_button %}
+{% block user %} 
+  {% if employee.position == 'Gestor de estoque' %}
+    {{ employee.name }} (ge)
+  {% else %}
+    {{ employee.name }} (es)
+  {% endif %}
+{% endblock user %}
+{% block content %}
+
+<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <form id="update_product" enctype="multipart/form-data" action="{% url 'warehouse:saida' %}" method="POST">
+        {% csrf_token %}
+          <div class="formbold-input-flex">
+            <div>
+                <input
+                type="text"
+                name="bar_code"
+                id="lastname"
+                placeholder="Código de barras"
+                class="formbold-form-input"
+                />
+                <label for="lastname" class="formbold-form-label"> Código de barras </label>
+            </div>
+            <div>
+                <input
+                type="number"
+                name="qtt"
+                id="lastname"
+                class="formbold-form-input"
+                min="1"
+                />
+                <label for="lastname" class="formbold-form-label"> Quantidade </label>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock content %}

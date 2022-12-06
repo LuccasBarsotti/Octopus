@@ -1,0 +1,255 @@
+body{
+    background-color: #F5F5F5;
+}
+.navbar
+{
+    background-color: #FFA000;
+    height: 87px;
+}
+#logo{
+    width: 700;
+}
+#warehouse
+{
+    color: white;
+}
+#navbarDropdown
+{
+    color: White;
+}
+#barra{
+    height: 181px;
+    background-color: white;
+}
+.list-group{
+    width: 165px;
+    height: 47px;
+    margin-left: 28px;
+    margin-top: 8%;
+}
+.list-group-item{
+    background-color: #1FDCAF;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+/* Style index.html */
+.link-success{
+    color: #1FDCAF;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  /* Card */
+  .card {
+    width: 300px;
+    height: 330px;
+    margin: 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+  }
+  
+  /* Card Header*/
+  .card-header {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-img {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+  }
+  
+  /* Card Body */
+  .card-body {
+    height: 170px;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .card-local {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .card-titulo {
+    color: #949494;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 15px 0;
+  }
+  
+  .card-texto {
+    font-size: 12px;
+    width: 250px;
+    margin: 0 auto;
+  }
+  
+  /* Card Footer */
+  .card-footer {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #000;
+  }
+  
+  .card-footer a {
+    color: #fff;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Cores Cards */
+  .card-1 .card-footer {
+    background-color: #2740d1;
+  }
+  
+  .card-1 .card-local {
+    color: #2740d1;
+  }
+  
+  .card-2 .card-footer {
+    background-color: #d12761;
+  }
+  
+  .card-2 .card-local {
+    color: #d12761;
+  }
+  
+  .card-3 .card-footer {
+    background-color: #00c702;
+  }
+  
+  .card-3 .card-local {
+    color: #00c702;
+  }
+  
+  /* Animação Hover */
+  .card:hover {
+    transform: scale3d(1.1, 1.1, 1);
+    cursor: pointer;
+  }
+  
+  /* cad_prod.html */
+
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 590px;
+    width: 100%;
+    background: white;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 22px;
+  }
+  .formbold-input-flex > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .formbold-textarea {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074D;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder {
+    color: #949494;
+  }
+  .formbold-form-input:focus {
+    border-color: #FFA000;
+  }
+  .formbold-form-label {
+    color: #949494;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 18px;
+  }
+  .formbold-form-input:focus + .formbold-form-label {
+    color: #FFA000;
+  }
+
+  .formbold-input-file {
+    margin-top: 30px;
+  }
+  .formbold-input-file input[type="file"] {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: -1;
+  }
+  .formbold-input-file .formbold-input-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .formbold-filename-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+  }
+  .formbold-filename {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-filename svg {
+    cursor: pointer;
+  }
+
+  .formbold-btn {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 12px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6A64F1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+    visibility: hidden;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }

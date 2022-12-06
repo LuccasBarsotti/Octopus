@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Histórico de Movimentações {% endblock title %}
+{% block css %} {% static 'style.css' %} {% endblock css %}
+{% block main_button %} <a href="{% url 'warehouse:cad_prod' %}" class="list-group-item">CADASTRAR</a> {% endblock main_button %}
+{% block user %} 
+  {% if employee.position == 'Gestor de estoque' %}
+    {{ employee.name }} (ge)
+  {% else %}
+    {{ employee.name }} (es)
+  {% endif %}
+{% endblock user %}
+{% block content %}
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Código de Barras</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Movimentação</th>
+        <th scope="col">Nome do funcionário</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if inventory_list  %}
+        {% for inventory in inventory_list %}
+          {% if inventory.mov == 'S' %}
+            <tr class="table-danger">
+          {% endif %}
+          {% if inventory.mov == 'E' %}
+            <tr class="table-success">
+          {% endif %}   
+            <th scope="row">{{ inventory.product.bar_code }}</th>
+            <td>{{ inventory.product.name }}</td>
+            <td>{{ inventory.qtt }}</td>
+            <td>{{ inventory.mov }}</td>
+            <td>{{ inventory.employee.name }}</td>
+            <td>{{ inventory.date }}</td>
+            </tr>
+        {% endfor %}
+      {% endif %}
+    </tbody>
+  </table>
+{% endblock content %}
